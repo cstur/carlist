@@ -1,6 +1,6 @@
-var costaApp = angular.module('costa', []);
+var chezhengApp = angular.module('chezheng', []);
 
-costaApp.controller('MainController', ['$scope','$http', function($scope,$http) {
+chezhengApp.controller('MainController', ['$scope','$http', function($scope,$http) {
 	$scope.cars=[];
 	$scope.title='车型管理';
 	$scope.footer='@车挣－史东杰';

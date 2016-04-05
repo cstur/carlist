@@ -21,20 +21,20 @@
 车型：<input type="text" ng-model="aCar.type">
 年份：<input type="text" ng-model="aCar.year">
 车系：<input type="text" ng-model="aCar.series">
-<input type="button" class="btn btn-sm btn-primary" value="Add" ng-click="addCredit()"/>
+<input type="button" class="btn btn-sm btn-primary" value="Add" ng-click="addCar()"/>
 
 <ul  class="list-group">
 <li ng-repeat="car in cars" class="list-group-item">
-	<p>车辆品牌：{{car.brand}}</p>
-	<p>车型：{{car.type}}</p>
-	<p>年份：{{car.year}}</p>
-	<p>车系：{{car.series}}</p>
+	<p>车辆品牌：{{car.data.brand}}</p>
+	<p>车型：{{car.data.type}}</p>
+	<p>年份：{{car.data.year}}</p>
+	<p>车系：{{car.data.series}}</p>
 	<input type="button" class="btn btn-sm btn-default" value="Delete" ng-click="deleteCar(car.index)"/>
 </li>
 </ul>
 </div>
 
-<footer>
+<footer class="text-center">
 	<p>{{footer}}</p>
 </footer>
 </div>
@@ -42,7 +42,7 @@
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
 <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="dest/js/controller.js"></script>
+<script type="text/javascript" src="js/controller.js"></script>
 
 </body>
 </html>

@@ -8,3 +8,4 @@ doc/
 node_modules/
 .DS_Store
 *.txt
+data/
