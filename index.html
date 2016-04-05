@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<link rel="icon" href="resources/images/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body ng-app="chezheng">
+<div  ng-controller="MainController" >
+<header>
+<blockquote>
+	<p>{{title}}</p>
+</blockquote>
+</header>
+
+<div class="container">
+
+品牌：<input type="text" ng-model="aCar.brand">
+车型：<input type="text" ng-model="aCar.type">
+年份：<input type="text" ng-model="aCar.year">
+车系：<input type="text" ng-model="aCar.series">
+<input type="button" class="btn btn-sm btn-primary" value="Add" ng-click="addCredit()"/>
+
+<ul  class="list-group">
+<li ng-repeat="car in cars" class="list-group-item">
+	<p>车辆品牌：{{car.brand}}</p>
+	<p>车型：{{car.type}}</p>
+	<p>年份：{{car.year}}</p>
+	<p>车系：{{car.series}}</p>
+	<input type="button" class="btn btn-sm btn-default" value="Delete" ng-click="deleteCar(car.index)"/>
+</li>
+</ul>
+</div>
+
+<footer>
+	<p>{{footer}}</p>
+</footer>
+</div>
+
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="dest/js/controller.js"></script>
+
+</body>
+</html>
